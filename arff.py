@@ -751,7 +751,7 @@ class ArffDecoder:
         return (name, type_)
 
     def _decode(self, s, encode_nominal=False, matrix_type=DENSE):
-        '''Do the job the ``encode``.'''
+        '''Do the work to ``decode``.'''
 
         # Make sure this method is idempotent
         self._current_line = 0
