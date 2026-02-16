@@ -932,7 +932,7 @@ class ArffEncoder:
 
             {<nominal-name1>, <nominal-name2>, <nominal-name3>, ...}
 
-        This method must receive a the name of the attribute and its type, if
+        This method must receive the name of the attribute and its type, if
         the attribute type is nominal, ``type`` must be a list of values.
 
         :param name: a string.
