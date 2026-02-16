@@ -68,7 +68,7 @@ Usage
 You can read an ARFF file as follows::
 
     >>> import arff
-    >>> data = arff.load(open('wheater.arff', 'rb'))
+    >>> data = arff.load(open('weather.arff', 'rb'))
 
 Which results in::
 
