@@ -16,7 +16,7 @@ class TestEncodeRelation(unittest.TestCase):
 
         self.assertEqual(result, expected)
 
-    def test_espaced(self):
+    def test_spaced(self):
         '''Relation name with spaces.'''
         encoder = self.get_encoder()
 
