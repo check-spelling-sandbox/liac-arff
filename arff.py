@@ -861,7 +861,7 @@ class ArffDecoder:
         '''Returns the Python representation of a given ARFF file.
 
         When a file object is passed as an argument, this method reads lines
-        iteratively, avoiding to load unnecessary information to the memory.
+        iteratively, avoiding loading unnecessary information to the memory.
 
         :param s: a string or file object with the ARFF file.
         :param encode_nominal: boolean, if True perform a label encoding
