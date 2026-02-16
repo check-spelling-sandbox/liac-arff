@@ -27,12 +27,11 @@
 '''
 The liac-arff module implements functions to read and write ARFF files in
 Python. It was created in the Connectionist Artificial Intelligence Laboratory
-(LIAC), which takes place at the Federal University of Rio Grande do Sul
-(UFRGS), in Brazil.
+(LIAC), at the Federal University of Rio Grande do Sul (UFRGS), in Brazil.
 
-ARFF (Attribute-Relation File Format) is an file format specially created for
+ARFF (Attribute-Relation File Format) is a file format specially created to
 describe datasets which are commonly used for machine learning experiments and
-softwares. This file format was created to be used in Weka, the best
+software. This file format was created to be used in Weka, the best
 representative software for machine learning automated experiments.
 
 An ARFF file can be divided into two sections: header and data. The Header
@@ -89,7 +88,7 @@ and have the following keys:
 
     (attribute_name, attribute_type)
 
-  the attribute_name is a string, and attribute_type must be an string
+  the attribute_name is a string, and attribute_type must be a string
   or a list of strings.
 - **data**: (OBLIGATORY) a list of data instances. Each data instance must be
   a list with values, depending on the attributes.
@@ -97,7 +96,7 @@ and have the following keys:
 The above keys must follow the case which were described, i.e., the keys are
 case sensitive. The attribute type ``attribute_type`` must be one of these
 strings (they are not case sensitive): ``NUMERIC``, ``INTEGER``, ``REAL`` or
-``STRING``. For nominal attributes, the ``atribute_type`` must be a list of
+``STRING``. For nominal attributes, the ``attribute_type`` must be a list of
 strings.
 
 In this format, the XOR dataset presented above can be represented as a python
@@ -752,7 +751,7 @@ class ArffDecoder:
         return (name, type_)
 
     def _decode(self, s, encode_nominal=False, matrix_type=DENSE):
-        '''Do the job the ``encode``.'''
+        '''Do the work to ``decode``.'''
 
         # Make sure this method is idempotent
         self._current_line = 0
@@ -862,7 +861,7 @@ class ArffDecoder:
         '''Returns the Python representation of a given ARFF file.
 
         When a file object is passed as an argument, this method reads lines
-        iteratively, avoiding to load unnecessary information to the memory.
+        iteratively, avoiding loading unnecessary information to memory.
 
         :param s: a string or file object with the ARFF file.
         :param encode_nominal: boolean, if True perform a label encoding
@@ -933,7 +932,7 @@ class ArffEncoder:
 
             {<nominal-name1>, <nominal-name2>, <nominal-name3>, ...}
 
-        This method must receive a the name of the attribute and its type, if
+        This method must receive the name of the attribute and its type, if
         the attribute type is nominal, ``type`` must be a list of values.
 
         :param name: a string.
@@ -955,7 +954,7 @@ class ArffEncoder:
         '''Encodes a given object to an ARFF file.
 
         :param obj: the object containing the ARFF information.
-        :return: the ARFF file as an string.
+        :return: the ARFF file as a string.
         '''
         data = [row for row in self.iter_encode(obj)]
 

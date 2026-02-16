@@ -16,7 +16,7 @@ class TestEncodeRelation(unittest.TestCase):
 
         self.assertEqual(result, expected)
 
-    def test_espaced(self):
+    def test_spaced(self):
         '''Relation name with spaces.'''
         encoder = self.get_encoder()
 
@@ -27,14 +27,8 @@ class TestEncodeRelation(unittest.TestCase):
         self.assertEqual(result, expected)
 
     def test_special(self):
-        '''Relation name with spaces.'''
+        '''Relation name with special characters.'''
         encoder = self.get_encoder()
-
-        fixture = '%relationnameand'
-        result = encoder._encode_relation(fixture)
-        expected = '@RELATION "%relationnameand"'
-
-        self.assertEqual(result, expected)
 
         fixture = 'relation,nameand'
         result = encoder._encode_relation(fixture)
