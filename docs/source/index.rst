@@ -413,7 +413,7 @@ resulting in::
         ]
     }
 
-When choosing `arff.COO`, the data can be dircetly passed to the scipy
+When choosing `arff.COO`, the data can be directly passed to the scipy
 constructor::
 
     from scipy import sparse
