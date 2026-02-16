@@ -88,7 +88,7 @@ and have the following keys:
 
     (attribute_name, attribute_type)
 
-  the attribute_name is a string, and attribute_type must be an string
+  the attribute_name is a string, and attribute_type must be a string
   or a list of strings.
 - **data**: (OBLIGATORY) a list of data instances. Each data instance must be
   a list with values, depending on the attributes.
@@ -954,7 +954,7 @@ class ArffEncoder:
         '''Encodes a given object to an ARFF file.
 
         :param obj: the object containing the ARFF information.
-        :return: the ARFF file as an string.
+        :return: the ARFF file as a string.
         '''
         data = [row for row in self.iter_encode(obj)]
 
